@@ -1,0 +1,66 @@
+@charset "UTF-8";
+
+
+
+.file {
+  position: relative;
+  margin:: 0px 0 0 60px;
+  @include align-items(center);
+  @include display(flex);
+  @include justify-content(center);
+  @include linear-gradient(to top right, #bf7a6b 0%, #e6d8a7 100%);
+}
+
+
+.file-upload-wrapper {
+  $defaultColor: #ff00ff;
+  $height: 60px;
+  
+  position: relative;
+  width: 100%;
+   margin:: 0px 0 0 60px;
+  height: $height;
+  
+  &:after {
+    content: attr(data-text);
+    font-size: 18px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #e6e6e6;
+    padding: 10px 15px;
+    display: block;
+    width: calc(100% - 40px);
+    pointer-events: none;
+    z-index: 20;
+    height: $height - 20px;
+    line-height: $height - 20px;
+    color: #000;
+    border-radius: 5px 10px 10px 5px;
+    font-weight: 300;
+  }
+ 
+  
+  &:hover {
+    &:before {
+      background: darken($defaultColor, 10%);
+    }
+  }
+   input {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+    height: $height - 20px;
+    margin: 0;
+    padding: 0;
+    display: block;
+    cursor: pointer;
+    width: 100%;
+  }
+}
+
+}

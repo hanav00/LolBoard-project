@@ -1,0 +1,645 @@
+@charset "UTF-8";
+
+
+
+
+
+:root {
+	--white: #ffffff;
+	--light: #f0eff3;
+	--black: #000000;
+	--dark-blue: #1f2029;
+	--dark-light: #353746;
+	--red: #da2c4d;
+	--yellow: #f8ab37;
+	--grey: #ecedf3;
+}
+
+
+
+
+
+
+[type="radio"]:checked,
+[type="radio"]:not(:checked){
+	position: absolute;
+	left: -9999px;
+	width: 0;
+	height: 0;
+	visibility: hidden;
+}
+
+
+.checkbox-tools:checked + label,
+.checkbox-tools:not(:checked) + label{
+	position: relative;
+	display: inline-block;
+	padding: 20px;
+	width: 83px;
+	height: 83px;
+	font-size: 12px;
+	line-height: 30px;
+	letter-spacing: 1px;
+	margin: 0 auto;
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-bottom: 10px;
+	text-align: center;
+	border-radius: 40px;
+	overflow: hidden;
+	cursor: pointer;
+	text-transform: uppercase;
+	color: white;
+	background-color:gray;
+}
+.checkbox-tools#aatrox + label{
+	background: url(/resources/images/avatar/aatrox.png) no-repeat;
+	background-size: 83px;
+	background-position: center;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+.checkbox-tools#aatrox:checked + label{
+	background: linear-gradient(298deg, #DCC375, #ff7321, #fd21d5, #b721ff);
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.checkbox-tools#ahri + label{
+	background: url(/resources/images/avatar/ahri.png) no-repeat;
+	background-size: 83px;
+	background-position: center;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+.checkbox-tools#ahri:checked + label{
+	background: linear-gradient(298deg, #DCC375, #ff7321, #fd21d5, #b721ff);
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.checkbox-tools#akali + label{
+	background: url(/resources/images/avatar/akali.png) no-repeat;
+	background-size: 83px;
+	background-position: center;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+.checkbox-tools#akali:checked + label{
+	background: linear-gradient(298deg, #DCC375, #ff7321, #fd21d5, #b721ff);
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.checkbox-tools#brand + label{
+	background: url(/resources/images/avatar/brand.png) no-repeat;
+	background-size: 83px;
+	background-position: center;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+.checkbox-tools#brand:checked + label{
+	background: linear-gradient(298deg, #DCC375, #ff7321, #fd21d5, #b721ff);
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.checkbox-tools#caitlyn + label{
+	background: url(/resources/images/avatar/caitlyn.png) no-repeat;
+	background-size: 83px;
+	background-position: center;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+.checkbox-tools#caitlyn:checked + label{
+	background: linear-gradient(298deg, #DCC375, #ff7321, #fd21d5, #b721ff);
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.checkbox-tools#diana + label{
+	background: url(/resources/images/avatar/diana.png) no-repeat;
+	background-size: 83px;
+	background-position: center;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+.checkbox-tools#diana:checked + label{
+	background: linear-gradient(298deg, #DCC375, #ff7321, #fd21d5, #b721ff);
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+.checkbox-tools#ekko + label{
+	background: url(/resources/images/avatar/ekko.png) no-repeat;
+	background-size: 83px;
+	background-position: center;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+.checkbox-tools#ekko:checked + label{
+	background: linear-gradient(298deg, #DCC375, #ff7321, #fd21d5, #b721ff);
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.checkbox-tools#evelynn + label{
+	background: url(/resources/images/avatar/evelynn.png) no-repeat;
+	background-size: 83px;
+	background-position: center;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+.checkbox-tools#evelynn:checked + label{
+	background: linear-gradient(298deg, #DCC375, #ff7321, #fd21d5, #b721ff);
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.checkbox-tools#ezreal + label{
+	background: url(/resources/images/avatar/ezreal.png) no-repeat;
+	background-size: 83px;
+	background-position: center;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+.checkbox-tools#ezreal:checked + label{
+	background: linear-gradient(298deg, #DCC375, #ff7321, #fd21d5, #b721ff);
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.checkbox-tools#fiora + label{
+	background: url(/resources/images/avatar/fiora.png) no-repeat;
+	background-size: 83px;
+	background-position: center;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+.checkbox-tools#fiora:checked + label{
+	background: linear-gradient(298deg, #DCC375, #ff7321, #fd21d5, #b721ff);
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.checkbox-tools#fizz + label{
+	background: url(/resources/images/avatar/fizz.png) no-repeat;
+	background-size: 83px;
+	background-position: center;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+.checkbox-tools#fizz:checked + label{
+	background: linear-gradient(298deg, #DCC375, #ff7321, #fd21d5, #b721ff);
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.checkbox-tools#garen + label{
+	background: url(/resources/images/avatar/garen.png) no-repeat;
+	background-size: 83px;
+	background-position: center;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+.checkbox-tools#garen:checked + label{
+	background: linear-gradient(298deg, #DCC375, #ff7321, #fd21d5, #b721ff);
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+
+.checkbox-tools#gwen + label{
+	background: url(/resources/images/avatar/gwen.png) no-repeat;
+	background-size: 83px;
+	background-position: center;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+.checkbox-tools#gwen:checked + label{
+	background: linear-gradient(298deg, #DCC375, #ff7321, #fd21d5, #b721ff);
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.checkbox-tools#irelia + label{
+	background: url(/resources/images/avatar/irelia.png) no-repeat;
+	background-size: 83px;
+	background-position: center;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+.checkbox-tools#irelia:checked + label{
+	background: linear-gradient(298deg, #DCC375, #ff7321, #fd21d5, #b721ff);
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.checkbox-tools#janna + label{
+	background: url(/resources/images/avatar/janna.png) no-repeat;
+	background-size: 83px;
+	background-position: center;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+.checkbox-tools#janna:checked + label{
+	background: linear-gradient(298deg, #DCC375, #ff7321, #fd21d5, #b721ff);
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.checkbox-tools#jinx + label{
+	background: url(/resources/images/avatar/jinx.png) no-repeat;
+	background-size: 83px;
+	background-position: center;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+.checkbox-tools#jinx:checked + label{
+	background: linear-gradient(298deg, #DCC375, #ff7321, #fd21d5, #b721ff);
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.checkbox-tools#kaisa + label{
+	background: url(/resources/images/avatar/kaisa.png) no-repeat;
+	background-size: 83px;
+	background-position: center;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+.checkbox-tools#kaisa:checked + label{
+	background: linear-gradient(298deg, #DCC375, #ff7321, #fd21d5, #b721ff);
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.checkbox-tools#katarina + label{
+	background: url(/resources/images/avatar/katarina.png) no-repeat;
+	background-size: 83px;
+	background-position: center;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+.checkbox-tools#katarina:checked + label{
+	background: linear-gradient(298deg, #DCC375, #ff7321, #fd21d5, #b721ff);
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+.checkbox-tools#kayn + label{
+	background: url(/resources/images/avatar/kayn.png) no-repeat;
+	background-size: 83px;
+	background-position: center;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+.checkbox-tools#kayn:checked + label{
+	background: linear-gradient(298deg, #DCC375, #ff7321, #fd21d5, #b721ff);
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.checkbox-tools#ksante + label{
+	background: url(/resources/images/avatar/ksante.png) no-repeat;
+	background-size: 83px;
+	background-position: center;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+.checkbox-tools#ksante:checked + label{
+	background: linear-gradient(298deg, #DCC375, #ff7321, #fd21d5, #b721ff);
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.checkbox-tools#leana + label{
+	background: url(/resources/images/avatar/leana.png) no-repeat;
+	background-size: 83px;
+	background-position: center;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+.checkbox-tools#leana:checked + label{
+	background: linear-gradient(298deg, #DCC375, #ff7321, #fd21d5, #b721ff);
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.checkbox-tools#leblanc + label{
+	background: url(/resources/images/avatar/leblanc.png) no-repeat;
+	background-size: 83px;
+	background-position: center;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+.checkbox-tools#leblanc:checked + label{
+	background: linear-gradient(298deg, #DCC375, #ff7321, #fd21d5, #b721ff);
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.checkbox-tools#leesin + label{
+	background: url(/resources/images/avatar/leesin.png) no-repeat;
+	background-size: 83px;
+	background-position: center;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+.checkbox-tools#leesin:checked + label{
+	background: linear-gradient(298deg, #DCC375, #ff7321, #fd21d5, #b721ff);
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.checkbox-tools#lissandra + label{
+	background: url(/resources/images/avatar/lissandra.png) no-repeat;
+	background-size: 83px;
+	background-position: center;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+.checkbox-tools#lissandra:checked + label{
+	background: linear-gradient(298deg, #DCC375, #ff7321, #fd21d5, #b721ff);
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+
+.checkbox-tools#lucian + label{
+	background: url(/resources/images/avatar/lucian.png) no-repeat;
+	background-size: 83px;
+	background-position: center;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+.checkbox-tools#lucian:checked + label{
+	background: linear-gradient(298deg, #DCC375, #ff7321, #fd21d5, #b721ff);
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.checkbox-tools#lulu + label{
+	background: url(/resources/images/avatar/lulu.png) no-repeat;
+	background-size: 83px;
+	background-position: center;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+.checkbox-tools#lulu:checked + label{
+	background: linear-gradient(298deg, #DCC375, #ff7321, #fd21d5, #b721ff);
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.checkbox-tools#lux + label{
+	background: url(/resources/images/avatar/lux.png) no-repeat;
+	background-size: 83px;
+	background-position: center;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+.checkbox-tools#lux:checked + label{
+	background: linear-gradient(298deg, #DCC375, #ff7321, #fd21d5, #b721ff);
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.checkbox-tools#malphite + label{
+	background: url(/resources/images/avatar/malphite.png) no-repeat;
+	background-size: 83px;
+	background-position: center;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+.checkbox-tools#malphite:checked + label{
+	background: linear-gradient(298deg, #DCC375, #ff7321, #fd21d5, #b721ff);
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.checkbox-tools#masteryi + label{
+	background: url(/resources/images/avatar/masteryi.png) no-repeat;
+	background-size: 83px;
+	background-position: center;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+.checkbox-tools#masteryi:checked + label{
+	background: linear-gradient(298deg, #DCC375, #ff7321, #fd21d5, #b721ff);
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.checkbox-tools#missfortune + label{
+	background: url(/resources/images/avatar/missfortune.png) no-repeat;
+	background-size: 83px;
+	background-position: center;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+.checkbox-tools#missfortune:checked + label{
+	background: linear-gradient(298deg, #DCC375, #ff7321, #fd21d5, #b721ff);
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+
+.checkbox-tools#nami + label{
+	background: url(/resources/images/avatar/nami.png) no-repeat;
+	background-size: 83px;
+	background-position: center;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+.checkbox-tools#nami:checked + label{
+	background: linear-gradient(298deg, #DCC375, #ff7321, #fd21d5, #b721ff);
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.checkbox-tools#neeko + label{
+	background: url(/resources/images/avatar/neeko.png) no-repeat;
+	background-size: 83px;
+	background-position: center;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+.checkbox-tools#neeko:checked + label{
+	background: linear-gradient(298deg, #DCC375, #ff7321, #fd21d5, #b721ff);
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.checkbox-tools#pantheon + label{
+	background: url(/resources/images/avatar/pantheon.png) no-repeat;
+	background-size: 83px;
+	background-position: center;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+.checkbox-tools#pantheon:checked + label{
+	background: linear-gradient(298deg, #DCC375, #ff7321, #fd21d5, #b721ff);
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.checkbox-tools#qiyana + label{
+	background: url(/resources/images/avatar/qiyana.png) no-repeat;
+	background-size: 83px;
+	background-position: center;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+.checkbox-tools#qiyana:checked + label{
+	background: linear-gradient(298deg, #DCC375, #ff7321, #fd21d5, #b721ff);
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.checkbox-tools#riven + label{
+	background: url(/resources/images/avatar/riven.png) no-repeat;
+	background-size: 83px;
+	background-position: center;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+.checkbox-tools#riven:checked + label{
+	background: linear-gradient(298deg, #DCC375, #ff7321, #fd21d5, #b721ff);
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.checkbox-tools#senna + label{
+	background: url(/resources/images/avatar/senna.png) no-repeat;
+	background-size: 83px;
+	background-position: center;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+.checkbox-tools#senna:checked + label{
+	background: linear-gradient(298deg, #DCC375, #ff7321, #fd21d5, #b721ff);
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+
+.checkbox-tools#seraphine + label{
+	background: url(/resources/images/avatar/seraphine.png) no-repeat;
+	background-size: 83px;
+	background-position: center;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+.checkbox-tools#seraphine:checked + label{
+	background: linear-gradient(298deg, #DCC375, #ff7321, #fd21d5, #b721ff);
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.checkbox-tools#sett + label{
+	background: url(/resources/images/avatar/sett.png) no-repeat;
+	background-size: 83px;
+	background-position: center;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+.checkbox-tools#sett:checked + label{
+	background: linear-gradient(298deg, #DCC375, #ff7321, #fd21d5, #b721ff);
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.checkbox-tools#sivir + label{
+	background: url(/resources/images/avatar/sivir.png) no-repeat;
+	background-size: 83px;
+	background-position: center;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+.checkbox-tools#sivir:checked + label{
+	background: linear-gradient(298deg, #DCC375, #ff7321, #fd21d5, #b721ff);
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.checkbox-tools#soraka + label{
+	background: url(/resources/images/avatar/soraka.png) no-repeat;
+	background-size: 83px;
+	background-position: center;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+.checkbox-tools#soraka:checked + label{
+	background: linear-gradient(298deg, #DCC375, #ff7321, #fd21d5, #b721ff);
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.checkbox-tools#sylas + label{
+	background: url(/resources/images/avatar/sylas.png) no-repeat;
+	background-size: 83px;
+	background-position: center;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+.checkbox-tools#sylas:checked + label{
+	background: linear-gradient(298deg, #DCC375, #ff7321, #fd21d5, #b721ff);
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.checkbox-tools#syndra + label{
+	background: url(/resources/images/avatar/syndra.png) no-repeat;
+	background-size: 83px;
+	background-position: center;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+.checkbox-tools#syndra:checked + label{
+	background: linear-gradient(298deg, #DCC375, #ff7321, #fd21d5, #b721ff);
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+.checkbox-tools#talon + label{
+	background: url(/resources/images/avatar/talon.png) no-repeat;
+	background-size: 83px;
+	background-position: center;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+.checkbox-tools#talon:checked + label{
+	background: linear-gradient(298deg, #DCC375, #ff7321, #fd21d5, #b721ff);
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.checkbox-tools#teemo + label{
+	background: url(/resources/images/avatar/teemo.png) no-repeat;
+	background-size: 83px;
+	background-position: center;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+.checkbox-tools#teemo:checked + label{
+	background: linear-gradient(298deg, #DCC375, #ff7321, #fd21d5, #b721ff);
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.checkbox-tools#thresh + label{
+	background: url(/resources/images/avatar/thresh.png) no-repeat;
+	background-size: 83px;
+	background-position: center;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+.checkbox-tools#thresh:checked + label{
+	background: linear-gradient(298deg, #DCC375, #ff7321, #fd21d5, #b721ff);
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.checkbox-tools#vayne + label{
+	background: url(/resources/images/avatar/vayne.png) no-repeat;
+	background-size: 83px;
+	background-position: center;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+.checkbox-tools#vayne:checked + label{
+	background: linear-gradient(298deg, #DCC375, #ff7321, #fd21d5, #b721ff);
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.checkbox-tools#volibear + label{
+	background: url(/resources/images/avatar/volibear.png) no-repeat;
+	background-size: 83px;
+	background-position: center;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+.checkbox-tools#volibear:checked + label{
+	background: linear-gradient(298deg, #DCC375, #ff7321, #fd21d5, #b721ff);
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.checkbox-tools#warwick + label{
+	background: url(/resources/images/avatar/warwick.png) no-repeat;
+	background-size: 83px;
+	background-position: center;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+.checkbox-tools#warwick:checked + label{
+	background: linear-gradient(298deg, #DCC375, #ff7321, #fd21d5, #b721ff);
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+
+.checkbox-tools#xayah + label{
+	background: url(/resources/images/avatar/xayah.png) no-repeat;
+	background-size: 83px;
+	background-position: center;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+.checkbox-tools#xayah:checked + label{
+	background: linear-gradient(298deg, #DCC375, #ff7321, #fd21d5, #b721ff);
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.checkbox-tools#yasuo + label{
+	background: url(/resources/images/avatar/yasuo.png) no-repeat;
+	background-size: 83px;
+	background-position: center;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+.checkbox-tools#yasuo:checked + label{
+	background: linear-gradient(298deg, #DCC375, #ff7321, #fd21d5, #b721ff);
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.checkbox-tools#yuumi + label{
+	background: url(/resources/images/avatar/yuumi.png) no-repeat;
+	background-size: 83px;
+	background-position: center;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+.checkbox-tools#yuumi:checked + label{
+	background: linear-gradient(298deg, #DCC375, #ff7321, #fd21d5, #b721ff);
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.checkbox-tools#zed + label{
+	background: url(/resources/images/avatar/zed.png) no-repeat;
+	background-size: 83px;
+	background-position: center;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+.checkbox-tools#zed:checked + label{
+	background: linear-gradient(298deg, #DCC375, #ff7321, #fd21d5, #b721ff);
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.checkbox-tools#zoe + label{
+	background: url(/resources/images/avatar/zoe.png) no-repeat;
+	background-size: 83px;
+	background-position: center;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+.checkbox-tools#zoe:checked + label{
+	background: linear-gradient(298deg, #DCC375, #ff7321, #fd21d5, #b721ff);
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.checkbox-tools#zyra + label{
+	background: url(/resources/images/avatar/zyra.png) no-repeat;
+	background-size: 83px;
+	background-position: center;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+.checkbox-tools#zyra:checked + label{
+	background: linear-gradient(298deg, #DCC375, #ff7321, #fd21d5, #b721ff);
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.checkbox-tools:checked + label{
+	background: linear-gradient(298deg, #DCC375, #ff7321, #fd21d5, #b721ff);
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.checkbox-tools:not(:checked) + label:hover{
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.checkbox-tools:checked + label::before,
+.checkbox-tools:not(:checked) + label::before{
+	position: absolute;
+	content: '';
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 4px;
+	background-image: linear-gradient(298deg, #ffc9fc, #b721ff, #fd21d5, #b721ff);
+	z-index: -1;
+}
+.checkbox-tools:checked + label .uil,
+.checkbox-tools:not(:checked) + label .uil{
+	font-size: 24px;
+	line-height: 24px;
+	display: block;
+	padding-bottom: 10px;
+}
+
+
+

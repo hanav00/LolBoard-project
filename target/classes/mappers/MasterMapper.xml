@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+ <mapper namespace="com.LolBoard.mappers.Master">
+ 
+ <!-- 삭제할 파일 개수 가져오기 -->
+ <select id="fileDeleteCount" resultType="int">
+ 	select count(*) from tbl_file where checkfile = 'N'
+ </select>
+ 	
+ <!-- 삭제할 파일 목록 정보 -->
+ <select id="fileDeleteList" resultType="com.LolBoard.dto.FileVO">
+ 	select * from tbl_file where checkfile = 'N' order by fileseqno
+ </select>
+
+<!-- 파일 정보 삭제 -->
+<delete id="deleteFile" parameterType="int">
+	delete from tbl_file where fileseqno=#{fileseqno}
+</delete> 
+
+
+<!-- 전체 회원 수 조회하기 -->
+<select id="memberNumber" resultType="int">
+	select count(*) from tbl_user
+</select>
+
+<!-- 전체 회원 정보 가져오기 -->
+<select id="memberInfo" resultType="com.LolBoard.dto.UserVO">
+	select userid, username, gender, job, email, birthdate, country, avatar from tbl_user
+</select>	
+
+
+<!-- 전체 글 수 조회하기 -->
+<select id="boardNumber" resultType="int">
+	select count(*) from tbl_board
+</select>
+
+<!-- 전체 글 정보 가져오기 -->
+<select id="boardInfo" resultType="com.LolBoard.dto.BoardVO">
+	select writer, title, to_char(regdate, 'YYYY-MM-DD HH24:MI:SS') as regdate, hitno
+	from tbl_board order by regdate desc
+</select>	
+ 
+ </mapper>

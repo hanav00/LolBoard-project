@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+ <mapper namespace="com.LolBoard.mappers.User">
+ <!-- id = 메서드 이름, parameterType=입력타입, resultType=리턴타입 -->
+ 	
+ 
+	<!-- 로그인 시 필요한 아이디/비번/이름 가져오기 -->
+	<!-- @Select("select userid, password, username from tbl_user where userid = '${userid}'")
+	public UserVO login(@Param("userid") String userid); -->
+	<select id="login" parameterType="String" resultType="com.LolBoard.dto.UserVO">
+		select userid, password, username, authkey, role, avatar from tbl_user where userid = #{userid}
+	</select>
+	
+	
+	<!-- 아이디 중복 체크 -->
+	<!-- //count=0이면 아이디 사용 가능, 1이면 기존 사용중인 아이디이므로 사용 불가능
+	@Select("select count(*) as idcount from tbl_user where userid='${userid}'")
+	public int idCheck(@Param("userid") String userid); -->
+	<select id="idCheck" parameterType="String" resultType="int">
+		select count(*) as idcount from tbl_user where userid=#{userid}
+	</select>
+	
+	
+	<!-- 회원가입 -->
+	<!-- @Insert("insert into tbl_user (userid, username, password, email, gender, hobby, job, description) "
+			+ "values('${user.userid}', '${user.username}', '${user.password}', '${user.email}', '${user.gender}', '${user.hobby}', '${user.job}', '${user.description}')")
+	public void SignUp(@Param("user") UserVO user); -->
+	<insert id="SignUp" parameterType="com.LolBoard.dto.UserVO">
+		insert into tbl_user (userid, username, password, email, gender, job, description, birthdate, country, avatar)
+			values(#{userid}, #{username}, #{password}, #{email}, #{gender}, #{job}, #{description}, #{birthdate}, #{country}, #{avatar})
+	</insert>
+	
+	
+	<!-- 마이페이지 -->
+	<select id="mypage" parameterType="String" resultType="com.LolBoard.dto.UserVO">
+		select username, userid, password, email, gender, job, description, birthdate, country, avatar from tbl_user
+			where userid = #{userid}
+	</select>	
+
+	<!-- 사용자 정보 수정 -->
+	<update id="userInfoUpdate" parameterType="com.LolBoard.dto.UserVO">
+		update tbl_user set email=#{email}, job=#{job}, description=#{description}, country=#{country}, birthdate=#{birthdate} where userid=#{userid}
+	</update>
+	
+	<!-- avatar 수정 -->
+	<update id="userAvatarUpdate" parameterType="com.LolBoard.dto.UserVO">
+		update tbl_user set avatar=#{avatar} where userid=#{userid}
+	</update>
+	
+	<!-- authkey -->
+	<update id="authkeyUpdate" parameterType="com.LolBoard.dto.UserVO">
+		update tbl_user set authkey = #{authkey} where userid=#{userid}
+	</update>
+	
+	<select id="userinfoByAuthkey" parameterType="String" resultType="com.LolBoard.dto.UserVO">
+		select * from tbl_user where authkey = #{authkey}
+	</select>
+	
+	
+	
+	<!-- 사용자 아이디 찾기 -->
+	<select id="searchID" parameterType="com.LolBoard.dto.UserVO" resultType="string">
+		select userid from tbl_user where username=#{username} and email=#{email}
+	</select>
+	
+	<!-- 패스워드 임시 발급을 위한 확인 -->
+	<select id="searchPassword" parameterType="com.LolBoard.dto.UserVO" resultType="int">
+		select count(*) from tbl_user where userid=#{userid} and username=#{username}
+	</select>
+	
+	<!--  패스워드 수정  -->
+	<update id="passwordUpdate" parameterType="com.LolBoard.dto.UserVO"> 
+		update tbl_user set password=#{password}, lastPasswordUpdate=sysdate() where userid=#{userid} 
+	</update>
+	
+	<!--  회원 탈퇴  -->
+	<delete id="deleteAccount" parameterType="String">
+		delete from tbl_user where userid=#{userid}
+	</delete>
+	
+	
+	
+	<!-- 비밀번호 바꾼 시간 체크 -->
+	<select id="passwordTime" parameterType="String" resultType="int">
+		select round(SYSDATE() - lastPasswordUpdate) as passwordDiff from tbl_user where userid=#{userid};
+	</select>
+ </mapper>

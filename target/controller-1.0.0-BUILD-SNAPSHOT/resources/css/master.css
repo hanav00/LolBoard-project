@@ -1,0 +1,63 @@
+@charset "utf-8";
+
+.menubar {
+	width: 100%;
+	height: auto;
+	background-color: #ffe8fd;
+	position:fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	text-align: center;
+}
+
+.menubar a {
+	display: block;
+	text-decoration: none;
+}
+
+.menubar .main_menu > li {
+	float: left;
+	width: 20%;
+	height: 100%;
+	line-height: 100px;
+	list-style: none;
+	font-weight: bold;
+	position: relative;
+	margin: 0;
+}
+
+.menubar .main_menu > li > a:hover {
+	background-color: #ff00ff;
+	color: white;
+	text-weight: bold;
+}
+
+
+***table***
+
+.InfoTable {
+      border-collapse: collapse;
+      border-top: 5px solid #ff00ff;
+      width: 80%;  
+      margin-left: auto; 
+      margin-right: auto;
+      font-size: 150%
+}  
+.InfoTable th {
+  background: #f0f6f9;
+  text-align: center;
+}
+.InfoTable th, .InfoTable td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+.InfoTable th:first-child, .InfoTable td:first-child {
+  border-left: 0;
+}
+.InfoTable th:last-child, .InfoTable td:last-child {
+  border-right: 0;
+}
+.InfoTable tr td:first-child{
+  text-align: center;
+}
