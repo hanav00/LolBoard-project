@@ -38,6 +38,7 @@ I initiated a Spring project and established the appropriate directory structure
 <h2>Step 3: Designing and Integrating the Database Tables</h2>
 I devised the database tables to effectively store and manage the post-related data. Leveraging JDBC, I seamlessly integrated the database functionality into the project, ensuring smooth communication between the application and the database.
 
+
 |Table Name	|Column Name|Description|
 |---|---|---|
 |`tbl_board`|seqno|Post number, PK|
@@ -83,6 +84,7 @@ I devised the database tables to effectively store and manage the post-related d
 
 <h2>Step 4:  Writing Code in the Spring MVC Structure</h2>
 In this step, I developed the code following the Spring MVC structure, ensuring proper organization and adherence to best practices.
+
 
 |Spring MVC Structure||
 |---|---|
